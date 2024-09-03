@@ -15,6 +15,11 @@
     "sharedGlobals": []
   },
   "targetDefaults": {
+    "@nx/next:build": {
+      "cache": true,
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
     "@nx/esbuild:esbuild": {
       "cache": true,
       "dependsOn": ["^build"],
@@ -35,5 +40,13 @@
       },
       "exclude": ["apps/amplify-test-nx-e2e/**/*"]
     }
-  ]
+  ],
+  "generators": {
+    "@nx/next": {
+      "application": {
+        "style": "css",
+        "linter": "eslint"
+      }
+    }
+  }
 }

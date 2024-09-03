@@ -1,0 +1,13 @@
+{
+  "name": "amplify-test",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "next start"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "next": "14.2.3",
+    "typescript": "5.5.4"
+  }
+}
