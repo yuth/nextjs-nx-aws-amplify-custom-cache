@@ -5,7 +5,7 @@ const requiredServerFilePath = path.join(__dirname, "../../../public/apps/amplif
 const content = fs.readFileSync(requiredServerFilePath, "utf-8");
 const requiredServerFile = JSON.parse(content);
 
-requiredServerFile.config.cacheHandler = "@henrikvolmer/nextjs-cache-handler-s3"; // Todo determine this later
+requiredServerFile.config.cacheHandler = "../node_modules/@henrikvolmer/nextjs-cache-handler-s3/dist/index.mjs"; // Todo determine this later
 
 fs.writeFileSync(requiredServerFilePath, JSON.stringify(requiredServerFile));
 
